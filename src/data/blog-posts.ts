@@ -67,4 +67,72 @@ export const blogPostsByProject: Record<string, BlogPost[]> = {
     },
   ],
   stormcrawler: [],
+  cs: [
+    {
+      title: "Boolean true == \"true\"가 가능할까요?",
+      url: "https://hyem5019.tistory.com/entry/Boolean-true-true%EA%B0%80-%EA%B0%80%EB%8A%A5%ED%95%A0%EA%B9%8C%EC%9A%94",
+      date: "2024.06.13",
+      theme: "백엔드 개발",
+    },
+    {
+      title: "스프링 빈이란??",
+      url: "https://hyem5019.tistory.com/entry/%EC%8A%A4%ED%94%84%EB%A7%81-%EB%B9%88%EC%9D%B4%EB%9E%80",
+      date: "2024.02.28",
+      theme: "백엔드 개발",
+    },
+    {
+      title: "스프링 컨테이너 DI와 IoC",
+      url: "https://hyem5019.tistory.com/entry/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-DI%EC%99%80-IoC",
+      date: "2024.02.28",
+      theme: "백엔드 개발",
+    },
+    {
+      title: "@Autowired에 빨간줄이 그어진 이유",
+      url: "https://hyem5019.tistory.com/entry/Autowired%EC%97%90-%EB%B9%A8%EA%B0%84%EC%A4%84%EC%9D%B4-%EA%B7%B8%EC%96%B4%EC%A7%84-%EC%9D%B4%EC%9C%A0",
+      date: "2023.10.10",
+      theme: "트러블슈팅",
+    },
+    {
+      title: "[네트워크] https://www.google.com 으로 들어가면 무슨일이?",
+      url: "https://hyem5019.tistory.com/entry/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-httpswwwgooglecom-%EC%9C%BC%EB%A1%9C-%EB%93%A4%EC%96%B4%EA%B0%80%EB%A9%B4-%EB%AC%B4%EC%8A%A8%EC%9D%BC%EC%9D%B4",
+      date: "2023.07.31",
+      theme: "네트워크",
+    },
+    {
+      title: "데이터베이스도 깃허브처럼 써볼 수 있다고? Flyway에 대해 알아보자",
+      url: "https://hyem5019.tistory.com/entry/Flyway",
+      date: "2023.08.28",
+      theme: "데이터베이스",
+    },
+    {
+      title: "Lock & JPA Lock..중간에 겐세이 놓으시면 안됩니다.",
+      url: "https://hyem5019.tistory.com/entry/Lock-JPA-Lock%EA%B7%B8%EA%B2%8C-%EB%AD%94%EB%8D%B0",
+      date: "2023.08.22",
+      theme: "데이터베이스",
+    },
+    {
+      title: "8080 port is already used. 죽지 않는 좀비 프로세스 해결하기",
+      url: "https://hyem5019.tistory.com/entry/8080-port-is-already-used-%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%BB%90%EB%8B%A4-%EC%BC%9C%EB%8F%84-%EC%A3%BD%EC%A7%80-%EC%95%8A%EB%8A%94-%EC%A2%80%EB%B9%84-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%ED%95%B4%EA%B2%B0%ED%95%98%EB%8A%94-%EB%AC%B4%EC%8B%9D%ED%95%9C-%EB%B0%A9%EB%B2%95",
+      date: "2024.01.08",
+      theme: "트러블슈팅",
+    },
+    {
+      title: "디자인 패턴의 종류",
+      url: "https://hyem5019.tistory.com/entry/%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4%EC%9D%98-%EC%A2%85%EB%A5%98",
+      date: "2024.02.26",
+      theme: "설계/패턴",
+    },
+    {
+      title: "[디자인 패턴] 디자인 패턴이란??",
+      url: "https://hyem5019.tistory.com/entry/%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4-%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4%EC%9D%B4%EB%9E%80",
+      date: "2024.02.19",
+      theme: "설계/패턴",
+    },
+    {
+      title: "스프링부트 프로젝트 도커로 빌드하기 (근데 EC2도 곁들인)",
+      url: "https://hyem5019.tistory.com/entry/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%8F%84%EC%BB%A4%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0-%EA%B7%BC%EB%8D%B0-EC2%EB%8F%84-%EA%B3%81%EB%93%A4%EC%9D%B8",
+      date: "2023.10.06",
+      theme: "DevOps",
+    },
+  ],
 };
