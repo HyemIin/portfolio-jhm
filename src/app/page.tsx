@@ -107,7 +107,9 @@ export default function Home() {
                     {exp.role}
                   </p>
                   <p className="text-xs text-muted">
-                    {exp.sections[0].items[0]}
+                    {"items" in exp.sections[0] && exp.sections[0].items
+                      ? exp.sections[0].items[0]
+                      : exp.sections[0].category}
                   </p>
                 </div>
               ))}
