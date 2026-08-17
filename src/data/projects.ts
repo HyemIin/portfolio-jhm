@@ -64,7 +64,7 @@ export const projects: Project[] = [
     slug: "m42-delivery",
     title: "Logistics",
     description:
-      "배송 기사 위치를 실시간으로 추적하고, 배포 안정성을 확보한 의약품 배송 플랫폼 백엔드 API.",
+      "배송 기사 위치를 실시간으로 추적하고, 배포 안정성을 확보한 의약품 배송 플랫폼.",
     category: "Work",
     company: "모빌리티42",
     date: "2025.09 - 2025.10",
