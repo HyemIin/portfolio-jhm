@@ -12,14 +12,14 @@ export const projects: Project[] = [
     slug: "dq-platform",
     title: "DQ 미래 역량 검사",
     description:
-      "AI 시대에 맞는 미래 역량 진로 탐색 플랫폼. 자기보고식 설문이 아닌 게임형 시나리오 속 논서술형 문항으로 학생의 역량을 측정하고, Multi-LLM 1차 채점 + 전문가 2차 검증 하이브리드 방식으로 채점합니다. WEF 및 2022 개정 교과 핵심역량 기반 6대 유형, 12 코어 스킬, 30 진로 갈래를 진단합니다.",
+      "AI 시대에 맞는 미래 역량 진로 탐색 플랫폼. 학생이 게임형 시나리오 속 논서술형 문항을 풀면, AI가 자동 채점하고 강점 진로 분야를 분석해줍니다.",
     category: "Work",
     company: "코드하나",
     date: "2025.11 - Present",
     thumbnail: "/projects/placeholder.png",
     tags: ["Java", "Spring Boot", "Spring AI", "JPA", "MySQL", "Redis", "AWS", "Next.js", "React"],
     overview:
-      "디큐(DQ, Decode Quiz)는 AI 시대에 맞는 미래 역량 진로 탐색 플랫폼입니다. 게임형 시나리오 속 논서술형 문항으로 학생의 미래 역량을 측정하고, Multi-LLM 자동 채점 + 전문가 검증 하이브리드 방식으로 채점합니다.",
+      "디큐(DQ)는 학생이 게임형 시나리오 속 논서술형 문항을 풀면, AI가 자동으로 채점하고 강점 진로 분야를 분석해주는 미래 역량 진로 탐색 플랫폼입니다.",
     role: "개발 총괄",
     team: "1명",
     links: [
