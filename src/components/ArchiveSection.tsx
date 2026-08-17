@@ -78,12 +78,17 @@ function BlogCard({ post }: { post: BlogPost }) {
   );
 }
 
+const PAGE_SIZE = 6;
+
 export default function ArchiveSection() {
   const allPosts = Object.values(blogPostsByProject).flat();
   const themes = [...new Set(allPosts.map((p) => p.theme))];
   const [activeTheme, setActiveTheme] = useState(themes[0]);
+  const [page, setPage] = useState(0);
 
   const filtered = allPosts.filter((p) => p.theme === activeTheme);
+  const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
+  const paged = filtered.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
     <div className="grid gap-6 lg:grid-cols-5">
@@ -95,7 +100,7 @@ export default function ArchiveSection() {
             return (
               <button
                 key={theme}
-                onClick={() => setActiveTheme(theme)}
+                onClick={() => { setActiveTheme(theme); setPage(0); }}
                 className={`flex w-full items-center gap-2 rounded-lg px-3 py-2.5 text-left text-sm transition-all ${
                   activeTheme === theme
                     ? "bg-accent/10 font-semibold text-accent"
@@ -119,10 +124,41 @@ export default function ArchiveSection() {
           <span className="text-sm text-muted">({filtered.length})</span>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((post) => (
+          {paged.map((post) => (
             <BlogCard key={post.url} post={post} />
           ))}
         </div>
+        {totalPages > 1 && (
+          <div className="mt-6 flex items-center justify-center gap-2">
+            <button
+              onClick={() => setPage((p) => Math.max(0, p - 1))}
+              disabled={page === 0}
+              className="rounded-lg border border-card-border px-3 py-1.5 text-xs text-muted transition-colors hover:border-accent/30 hover:text-accent disabled:opacity-30 disabled:hover:border-card-border disabled:hover:text-muted"
+            >
+              이전
+            </button>
+            {Array.from({ length: totalPages }, (_, i) => (
+              <button
+                key={i}
+                onClick={() => setPage(i)}
+                className={`h-8 w-8 rounded-lg text-xs font-medium transition-colors ${
+                  page === i
+                    ? "bg-accent text-white"
+                    : "border border-card-border text-muted hover:border-accent/30 hover:text-accent"
+                }`}
+              >
+                {i + 1}
+              </button>
+            ))}
+            <button
+              onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
+              disabled={page === totalPages - 1}
+              className="rounded-lg border border-card-border px-3 py-1.5 text-xs text-muted transition-colors hover:border-accent/30 hover:text-accent disabled:opacity-30 disabled:hover:border-card-border disabled:hover:text-muted"
+            >
+              다음
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
