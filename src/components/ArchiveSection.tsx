@@ -78,7 +78,7 @@ function BlogCard({ post }: { post: BlogPost }) {
   );
 }
 
-const PAGE_SIZE = 6;
+const PAGE_SIZE = 3;
 
 export default function ArchiveSection() {
   const allPosts = Object.values(blogPostsByProject).flat();
