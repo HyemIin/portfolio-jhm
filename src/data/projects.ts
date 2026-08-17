@@ -100,7 +100,7 @@ export const projects: Project[] = [
     slug: "gasip",
     title: "GASIP",
     description:
-      "80명 이상 사용자를 보유한 가천대학교 교수 평가 서비스. Redis 기반 동시성 제어와 캐싱 최적화.",
+      "가천대학교 학생들이 교수와 강의를 평가하고 공유할 수 있는 커뮤니티 서비스.",
     category: "Side Project",
     date: "2023.08 - 2024.09",
     thumbnail: "/projects/placeholder.png",
@@ -140,7 +140,7 @@ export const projects: Project[] = [
     slug: "stormcrawler",
     title: "Apache StormCrawler",
     description:
-      "오픈소스 기여. waitAck 캐시 유연성 확보로 대규모 실시간 데이터 스트림의 안정적 ACK 처리 보장.",
+      "대규모 웹 크롤링 파이프라인을 위한 오픈소스 프로젝트 기여. (GitHub Stars 1.0k+)",
     category: "Open Source",
     date: "2024",
     thumbnail: "/projects/placeholder.png",
