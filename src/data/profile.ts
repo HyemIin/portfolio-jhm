@@ -105,7 +105,7 @@ export const experiences = [
     company: "모빌리티42",
     logo: "/m42-logo.png",
     department: "개발 1팀",
-    role: "Kotlin Software Engineer",
+    role: "Kotlin Software Engineer (인턴)",
     period: "2025.08 - 2025.10",
     sections: [
       {
