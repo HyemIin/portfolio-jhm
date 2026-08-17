@@ -20,7 +20,7 @@ export const projects: Project[] = [
     tags: ["Java", "Spring Boot", "Spring AI", "JPA", "MySQL", "Redis", "AWS", "Next.js", "React"],
     overview:
       "디큐(DQ, Decode Quiz)는 AI 시대에 맞는 미래 역량 진로 탐색 플랫폼입니다. 게임형 시나리오 속 논서술형 문항으로 학생의 미래 역량을 측정하고, Multi-LLM 자동 채점 + 전문가 검증 하이브리드 방식으로 채점합니다.",
-    role: "서비스 기획, 개발 총괄, 현장 테스트",
+    role: "개발 총괄",
     team: "1명",
     links: [
       {
