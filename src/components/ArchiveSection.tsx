@@ -8,13 +8,13 @@ const themeColors: Record<string, string> = {
   "동시성/성능": "from-emerald-500/20 to-emerald-600/5 border-emerald-500/20",
   "트러블슈팅": "from-amber-500/20 to-amber-600/5 border-amber-500/20",
   "기능 구현": "from-blue-500/20 to-blue-600/5 border-blue-500/20",
-  "Spring 심화": "from-green-500/20 to-green-600/5 border-green-500/20",
+  "백엔드 개발": "from-green-500/20 to-green-600/5 border-green-500/20",
   "인증/보안": "from-red-500/20 to-red-600/5 border-red-500/20",
 };
 
 function ThemeIcon({ theme, className = "h-5 w-5" }: { theme: string; className?: string }) {
   switch (theme) {
-    case "Spring 심화":
+    case "백엔드 개발":
       return (
         <svg className={className} viewBox="0 0 24 24" fill="currentColor">
           <path d="M20.59 5.41a10.34 10.34 0 01.88 3.43c-2.79 1.74-5.2 3.98-6.05 7.15-.68 2.53-2.1 3.75-3.55 4.43a10.1 10.1 0 01-3.74-1.5c1.35-1.47 2.35-3.27 2.35-5.42 0-2.92-1.98-5.13-4.48-6.5a9.96 9.96 0 014.18-4.77c.9 1.28 2.4 2.13 4.1 2.13 1.86 0 3.47-1.02 4.32-2.52l.02.02 1.97 3.55zm-8.59 5.59a2 2 0 100-4 2 2 0 000 4z" />

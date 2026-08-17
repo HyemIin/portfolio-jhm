@@ -11,7 +11,7 @@ export const blogPostsByProject: Record<string, BlogPost[]> = {
       title: "@Transactional 어노테이션 해체 분해하기",
       url: "https://hyem5019.tistory.com/entry/Transactional-%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98-%ED%95%B4%EC%B2%B4-%EB%B6%84%ED%95%B4%ED%95%98%EA%B8%B0",
       date: "2026.01.11",
-      theme: "Spring 심화",
+      theme: "백엔드 개발",
     },
     {
       title: "쿠키 vs 세션 vs JWT, 실무에서는 뭐를 써야할까?",
