@@ -66,7 +66,7 @@ export default async function ProjectDetail({
   const topics = projectTopics[slug] || [];
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-20">
+    <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-20">
       <Link
         href="/#projects"
         className="mb-10 inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-accent"
@@ -99,7 +99,7 @@ export default async function ProjectDetail({
         <span className="text-sm text-muted">{project.date}</span>
       </div>
 
-      <h1 className="mb-3 text-3xl font-bold sm:text-4xl">{project.title}</h1>
+      <h1 className="mb-3 text-2xl font-bold sm:text-3xl lg:text-4xl">{project.title}</h1>
       <p className="mb-6 text-lg leading-relaxed text-gray-300">
         {project.overview}
       </p>

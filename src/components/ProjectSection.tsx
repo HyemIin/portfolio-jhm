@@ -128,7 +128,7 @@ export default function ProjectSection() {
 
         {/* Right: topic blocks */}
         <div className="lg:col-span-3">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid gap-3 sm:grid-cols-2">
             {topics.map((topic) => (
               <Link
                 key={topic.slug}
@@ -156,7 +156,7 @@ export default function ProjectSection() {
             ))}
 
             {topics.length === 0 && (
-              <div className="col-span-2 flex h-48 items-center justify-center rounded-2xl border border-dashed border-card-border">
+              <div className="sm:col-span-2 flex h-48 items-center justify-center rounded-2xl border border-dashed border-card-border">
                 <div className="text-center">
                   <p className="mb-1 text-2xl opacity-30">📝</p>
                   <p className="text-sm text-muted">

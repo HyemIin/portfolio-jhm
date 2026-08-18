@@ -92,9 +92,31 @@ export default function ArchiveSection() {
 
   return (
     <div className="grid gap-6 lg:grid-cols-5">
-      {/* Left: keyword list */}
+      {/* Left: keyword list (desktop vertical, mobile horizontal scroll) */}
       <div className="lg:col-span-1">
-        <nav className="sticky top-24 space-y-1">
+        {/* Mobile: horizontal tabs */}
+        <div className="flex gap-2 overflow-x-auto pb-2 lg:hidden">
+          {themes.map((theme) => {
+            const count = allPosts.filter((p) => p.theme === theme).length;
+            return (
+              <button
+                key={theme}
+                onClick={() => { setActiveTheme(theme); setPage(0); }}
+                className={`flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1.5 text-sm transition-all ${
+                  activeTheme === theme
+                    ? "bg-accent text-white"
+                    : "border border-card-border bg-card text-muted"
+                }`}
+              >
+                <ThemeIcon theme={theme} className="h-3.5 w-3.5 shrink-0" />
+                <span>{theme}</span>
+                <span className="text-xs opacity-60">{count}</span>
+              </button>
+            );
+          })}
+        </div>
+        {/* Desktop: vertical nav */}
+        <nav className="sticky top-24 hidden space-y-1 lg:block">
           {themes.map((theme) => {
             const count = allPosts.filter((p) => p.theme === theme).length;
             return (
@@ -123,7 +145,7 @@ export default function ArchiveSection() {
           <h3 className="text-lg font-semibold">{activeTheme}</h3>
           <span className="text-sm text-muted">({filtered.length})</span>
         </div>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {paged.map((post) => (
             <BlogCard key={post.url} post={post} />
           ))}

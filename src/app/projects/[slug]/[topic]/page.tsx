@@ -87,7 +87,7 @@ export default async function TopicDetail({
   if (!project || !topic) notFound();
 
   return (
-    <article className="mx-auto max-w-3xl px-6 py-20">
+    <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-20">
       {/* Breadcrumb */}
       <Link
         href={`/projects/${project.slug}`}
@@ -112,7 +112,7 @@ export default async function TopicDetail({
         </span>
       </div>
 
-      <h1 className="mb-4 text-3xl font-bold sm:text-4xl">{topic.title}</h1>
+      <h1 className="mb-4 text-2xl font-bold sm:text-3xl lg:text-4xl">{topic.title}</h1>
       <p className="mb-8 text-lg leading-relaxed text-gray-300">
         {topic.summary}
       </p>

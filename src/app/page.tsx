@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       {/* ──── ABOUT (introduce) ──── */}
       <section id="about" className="border-b border-card-border">
-        <div className="mx-auto grid max-w-6xl gap-12 px-8 py-20 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-8 sm:py-20 lg:grid-cols-3 lg:gap-12">
           {/* Left: intro */}
           <div className="lg:col-span-2">
             <p className="mb-4 text-lg font-medium text-white">
@@ -20,10 +20,10 @@ export default function Home() {
             </p>
 
             <h1 className="mb-8">
-              <span className="block text-5xl font-extrabold leading-tight tracking-tight sm:text-6xl">
+              <span className="block text-3xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
                 BACKEND &
               </span>
-              <span className="block text-5xl font-extrabold leading-tight tracking-tight text-accent sm:text-6xl">
+              <span className="block text-3xl font-extrabold leading-tight tracking-tight text-accent sm:text-5xl lg:text-6xl">
                 SOFTWARE ENGINEER
               </span>
             </h1>
@@ -39,7 +39,7 @@ export default function Home() {
             </p>
 
             {/* Stats */}
-            <div className="mb-10 grid grid-cols-4 gap-4">
+            <div className="mb-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
               <div className="text-center">
                 <p className="text-3xl font-bold">1+</p>
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted">
@@ -143,7 +143,7 @@ export default function Home() {
 
       {/* ──── EXPERIENCE ──── */}
       <section id="experience" className="border-b border-card-border">
-        <div className="mx-auto max-w-6xl px-8 py-20">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-8 sm:py-20">
           <h2 className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent">
             Experience
           </h2>
@@ -218,7 +218,7 @@ export default function Home() {
 
       {/* ──── PROJECTS ──── */}
       <section id="projects" className="border-b border-card-border">
-        <div className="mx-auto max-w-6xl px-8 py-20">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-8 sm:py-20">
           <h2 className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent">
             Projects
           </h2>
@@ -231,7 +231,7 @@ export default function Home() {
 
       {/* ──── ARCHIVE ──── */}
       <section id="archive" className="border-b border-card-border">
-        <div className="mx-auto max-w-6xl px-8 py-20">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-8 sm:py-20">
           <h2 className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent">
             Archive
           </h2>
@@ -242,7 +242,7 @@ export default function Home() {
 
       {/* ──── SKILLS ──── */}
       <section id="skills" className="border-b border-card-border">
-        <div className="mx-auto max-w-6xl px-8 py-20">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-8 sm:py-20">
           <h2 className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent">
             Skills
           </h2>

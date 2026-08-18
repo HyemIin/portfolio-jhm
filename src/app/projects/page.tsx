@@ -19,7 +19,7 @@ export default function ProjectsPage() {
   }
 
   return (
-    <div className="mx-auto max-w-6xl px-8 py-20">
+    <div className="mx-auto max-w-6xl px-4 py-12 sm:px-8 sm:py-20">
       <h2 className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent">
         All Projects
       </h2>
@@ -36,7 +36,7 @@ export default function ProjectsPage() {
         />
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((project) => (
           <ProjectCard key={project.slug} project={project} />
         ))}
