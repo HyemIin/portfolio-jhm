@@ -16,7 +16,7 @@ export default function Sidebar() {
   return (
     <>
       {/* Mobile header */}
-      <header className="fixed left-0 right-0 top-0 z-50 flex h-14 items-center justify-between border-b border-card-border bg-[#131313] px-4 lg:hidden">
+      <header className="fixed left-0 right-0 top-0 z-50 flex h-14 items-center justify-between border-b border-card-border bg-[#131313] px-4 xl:hidden">
         <p className="text-sm font-bold text-foreground">{profile.name}</p>
         <button
           onClick={() => setOpen(!open)}
@@ -36,7 +36,7 @@ export default function Sidebar() {
       {/* Mobile overlay */}
       {open && (
         <div
-          className="fixed inset-0 z-40 bg-black/60 lg:hidden"
+          className="fixed inset-0 z-40 bg-black/60 xl:hidden"
           onClick={() => setOpen(false)}
         />
       )}
@@ -45,7 +45,7 @@ export default function Sidebar() {
       <aside
         className={`fixed left-0 top-0 z-50 flex h-screen w-60 flex-col items-center border-r border-card-border bg-[#131313] py-10 transition-transform duration-300 ${
           open ? "translate-x-0" : "-translate-x-full"
-        } lg:translate-x-0`}
+        } xl:translate-x-0`}
       >
         {/* Profile */}
         <div className="mb-10 flex flex-col items-center">

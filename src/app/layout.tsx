@@ -32,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="flex min-h-full font-sans">
         <Sidebar />
-        <main className="mt-14 flex min-h-screen flex-1 flex-col lg:ml-60 lg:mt-0">
+        <main className="mt-14 flex min-h-screen flex-1 flex-col xl:ml-60 xl:mt-0">
           {children}
           <Footer />
           <ScrollToTop />
