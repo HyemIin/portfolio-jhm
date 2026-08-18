@@ -24,11 +24,7 @@ export default function Sidebar() {
           aria-label="메뉴"
         >
           <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-            {open ? (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            )}
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </header>
@@ -47,6 +43,17 @@ export default function Sidebar() {
           open ? "translate-x-0" : "-translate-x-full"
         } xl:translate-x-0`}
       >
+        {/* Close button (mobile) */}
+        <button
+          onClick={() => setOpen(false)}
+          className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-lg text-muted hover:text-foreground xl:hidden"
+          aria-label="닫기"
+        >
+          <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
         {/* Profile */}
         <div className="mb-10 flex flex-col items-center">
           <div className="mb-4 h-28 w-28 overflow-hidden rounded-full ring-2 ring-accent/30">
