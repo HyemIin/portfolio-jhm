@@ -28,7 +28,7 @@ export const experiences = [
     company: "코드하나",
     logo: "/codehana-logo.png",
     department: "DQ 미래 역량 검사 개발",
-    role: "개발 총괄",
+    role: "Java Software Engineer · 디큐 서비스 기획 및 개발 담당",
     period: "2025.11 - Present",
     sections: [
       {
@@ -106,7 +106,7 @@ export const experiences = [
     company: "모빌리티42",
     logo: "/m42-logo.png",
     department: "개발 1팀",
-    role: "Kotlin Software Engineer (인턴)",
+    role: "Kotlin Software Engineer (인턴) · Logistics 개발 담당",
     period: "2025.08 - 2025.10",
     sections: [
       {

@@ -103,13 +103,8 @@ export default function Home() {
                     </div>
                     <p className="text-xs text-muted">{exp.period}</p>
                   </div>
-                  <p className="mb-1 text-xs text-muted">
-                    {exp.role}
-                  </p>
                   <p className="text-xs text-muted">
-                    {"items" in exp.sections[0] && exp.sections[0].items
-                      ? exp.sections[0].items[0]
-                      : exp.sections[0].category}
+                    {exp.role}
                   </p>
                 </div>
               ))}
