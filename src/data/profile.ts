@@ -28,7 +28,7 @@ export const experiences = [
     company: "코드하나",
     logo: "/codehana-logo.png",
     department: "DQ 미래 역량 검사 개발",
-    role: "Java Software Engineer",
+    role: "개발 총괄",
     period: "2025.11 - Present",
     sections: [
       {
