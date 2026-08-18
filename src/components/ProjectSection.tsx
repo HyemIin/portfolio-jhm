@@ -5,10 +5,18 @@ import Link from "next/link";
 import { projects } from "@/data/projects";
 import { projectTopics } from "@/data/project-topics";
 
+const TOPIC_PAGE_SIZE = 6;
+
 export default function ProjectSection() {
   const [activeSlug, setActiveSlug] = useState(projects[0].slug);
+  const [topicPage, setTopicPage] = useState(0);
   const activeProject = projects.find((p) => p.slug === activeSlug)!;
   const topics = projectTopics[activeSlug] || [];
+  const totalTopicPages = Math.ceil(topics.length / TOPIC_PAGE_SIZE);
+  const pagedTopics = topics.slice(
+    topicPage * TOPIC_PAGE_SIZE,
+    (topicPage + 1) * TOPIC_PAGE_SIZE,
+  );
 
   return (
     <div>
@@ -17,7 +25,10 @@ export default function ProjectSection() {
         {projects.map((p) => (
           <button
             key={p.slug}
-            onClick={() => setActiveSlug(p.slug)}
+            onClick={() => {
+              setActiveSlug(p.slug);
+              setTopicPage(0);
+            }}
             className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all ${
               activeSlug === p.slug
                 ? "bg-accent text-white shadow-[0_0_12px_rgba(99,102,241,0.3)]"
@@ -33,7 +44,7 @@ export default function ProjectSection() {
       <div className="grid gap-6 lg:grid-cols-5">
         {/* Left: project description + links */}
         <div className="lg:col-span-2">
-          <div className="sticky top-24 rounded-2xl border border-card-border bg-card p-6">
+          <div className="rounded-2xl border border-card-border bg-card p-6 lg:sticky lg:top-24">
             <div className="mb-3 flex items-center gap-2.5">
               <span className="rounded-full bg-accent-muted px-2.5 py-0.5 text-xs font-semibold text-accent">
                 {activeProject.category}
@@ -55,14 +66,14 @@ export default function ProjectSection() {
 
             <div className="mb-5 space-y-2.5 border-t border-card-border pt-5">
               <div className="flex gap-3 text-sm">
-                <span className="w-14 flex-shrink-0 font-medium text-accent">
+                <span className="w-14 shrink-0 font-medium text-accent">
                   Role
                 </span>
                 <span className="text-muted">{activeProject.role}</span>
               </div>
               {activeProject.team && (
                 <div className="flex gap-3 text-sm">
-                  <span className="w-14 flex-shrink-0 font-medium text-accent">
+                  <span className="w-14 shrink-0 font-medium text-accent">
                     Team
                   </span>
                   <span className="text-muted">{activeProject.team}</span>
@@ -126,10 +137,10 @@ export default function ProjectSection() {
           </div>
         </div>
 
-        {/* Right: topic blocks */}
-        <div className="lg:col-span-3">
-          <div className="grid gap-3 sm:grid-cols-2">
-            {topics.map((topic) => (
+        {/* Right: topic blocks (height matched to left) */}
+        <div className="flex flex-col lg:col-span-3">
+          <div className="grid flex-1 grid-rows-3 gap-3 sm:grid-cols-2">
+            {pagedTopics.map((topic) => (
               <Link
                 key={topic.slug}
                 href={`/projects/${activeProject.slug}/${topic.slug}`}
@@ -156,16 +167,48 @@ export default function ProjectSection() {
             ))}
 
             {topics.length === 0 && (
-              <div className="sm:col-span-2 flex h-48 items-center justify-center rounded-2xl border border-dashed border-card-border">
-                <div className="text-center">
-                  <p className="mb-1 text-2xl opacity-30">📝</p>
-                  <p className="text-sm text-muted">
-                    상세 콘텐츠가 준비 중입니다
-                  </p>
-                </div>
+              <div className="flex h-48 items-center justify-center rounded-2xl border border-dashed border-card-border sm:col-span-2">
+                <p className="text-sm text-muted">
+                  상세 콘텐츠가 준비 중입니다
+                </p>
               </div>
             )}
           </div>
+
+          {/* Pagination */}
+          {totalTopicPages > 1 && (
+            <div className="mt-4 flex items-center justify-center gap-2">
+              <button
+                onClick={() => setTopicPage((p) => Math.max(0, p - 1))}
+                disabled={topicPage === 0}
+                className="rounded-lg border border-card-border px-3 py-1.5 text-xs text-muted transition-colors hover:border-accent/30 hover:text-accent disabled:opacity-30 disabled:hover:border-card-border disabled:hover:text-muted"
+              >
+                이전
+              </button>
+              {Array.from({ length: totalTopicPages }, (_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setTopicPage(i)}
+                  className={`h-8 w-8 rounded-lg text-xs font-medium transition-colors ${
+                    topicPage === i
+                      ? "bg-accent text-white"
+                      : "border border-card-border text-muted hover:border-accent/30 hover:text-accent"
+                  }`}
+                >
+                  {i + 1}
+                </button>
+              ))}
+              <button
+                onClick={() =>
+                  setTopicPage((p) => Math.min(totalTopicPages - 1, p + 1))
+                }
+                disabled={topicPage === totalTopicPages - 1}
+                className="rounded-lg border border-card-border px-3 py-1.5 text-xs text-muted transition-colors hover:border-accent/30 hover:text-accent disabled:opacity-30 disabled:hover:border-card-border disabled:hover:text-muted"
+              >
+                다음
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>
