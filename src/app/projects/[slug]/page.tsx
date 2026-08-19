@@ -100,7 +100,7 @@ export default async function ProjectDetail({
       </div>
 
       <h1 className="mb-3 text-2xl font-bold sm:text-3xl lg:text-4xl">{project.title}</h1>
-      <p className="mb-6 text-lg leading-relaxed text-gray-300">
+      <p className="mb-6 text-lg leading-relaxed text-muted">
         {project.overview}
       </p>
 

@@ -5,7 +5,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <Link href={`/projects/${project.slug}`} className="group block">
       <article className="h-full overflow-hidden rounded-2xl border border-card-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-[0_8px_30px_rgba(99,102,241,0.08)]">
-        <div className="aspect-[16/9] overflow-hidden bg-[#141414]">
+        <div className="aspect-[16/9] overflow-hidden bg-background">
           <div className="flex h-full items-center justify-center">
             <span className="text-sm font-medium tracking-wider text-muted/50">
               {project.category}
@@ -36,7 +36,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               </span>
             ))}
             {project.tags.length > 4 && (
-              <span className="rounded-md bg-[#1f1f1f] px-2 py-0.5 text-xs text-muted">
+              <span className="rounded-md bg-card px-2 py-0.5 text-xs text-muted">
                 +{project.tags.length - 4}
               </span>
             )}

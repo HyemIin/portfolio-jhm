@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { profile } from "@/data/profile";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navItems = [
   { label: "ABOUT", href: "#about" },
@@ -16,10 +17,12 @@ export default function Sidebar() {
   return (
     <>
       {/* Mobile header */}
-      <header className="fixed left-0 right-0 top-0 z-50 flex h-14 items-center justify-between border-b border-card-border bg-[#131313] px-4 xl:hidden">
+      <header className="fixed left-0 right-0 top-0 z-50 flex h-14 items-center justify-between border-b border-card-border bg-card px-4 xl:hidden">
         <p className="text-sm font-bold text-foreground">{profile.name}</p>
-        <button
-          onClick={() => setOpen(!open)}
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <button
+            onClick={() => setOpen(!open)}
           className="flex h-9 w-9 items-center justify-center rounded-lg text-muted hover:text-foreground"
           aria-label="메뉴"
         >
@@ -27,6 +30,7 @@ export default function Sidebar() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
+        </div>
       </header>
 
       {/* Mobile overlay */}
@@ -39,7 +43,7 @@ export default function Sidebar() {
 
       {/* Sidebar */}
       <aside
-        className={`fixed left-0 top-0 z-50 flex h-screen w-60 flex-col items-center border-r border-card-border bg-[#131313] py-10 transition-transform duration-300 ${
+        className={`fixed left-0 top-0 z-50 flex h-screen w-60 flex-col items-center border-r border-card-border bg-card py-10 transition-transform duration-300 ${
           open ? "translate-x-0" : "-translate-x-full"
         } xl:translate-x-0`}
       >
@@ -82,7 +86,10 @@ export default function Sidebar() {
         </nav>
 
         {/* Bottom links */}
-        <div className="flex gap-4 pt-6">
+        <div className="mb-4">
+          <ThemeToggle />
+        </div>
+        <div className="flex gap-4">
           <a
             href={profile.github}
             target="_blank"

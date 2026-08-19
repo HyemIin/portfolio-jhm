@@ -11,9 +11,9 @@ export default function Home() {
         <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-8 sm:py-20 lg:grid-cols-3 lg:gap-12">
           {/* Left: intro */}
           <div className="lg:col-span-2">
-            <p className="mb-4 text-lg font-medium text-white">
+            <p className="mb-4 text-lg font-medium text-foreground">
               안녕하세요,{" "}
-              <span className="font-bold text-white">
+              <span className="font-bold text-foreground">
                 {profile.name}
               </span>
               입니다.
@@ -28,10 +28,10 @@ export default function Home() {
               </span>
             </h1>
 
-            <p className="mb-4 max-w-2xl leading-relaxed text-gray-300">
+            <p className="mb-4 max-w-2xl leading-relaxed text-muted">
               {profile.bio}
             </p>
-            <p className="mb-10 max-w-2xl leading-relaxed text-gray-300">
+            <p className="mb-10 max-w-2xl leading-relaxed text-muted">
               코드하나에서 미래 역량 검사 플랫폼 DQ(디큐)을 1인 개발하며 AI 에이전트 기반 1인 풀스택 개발
               체계를 구축했습니다. 서비스 기획과 디자인 검증, 부산교육대학교
               주관 실증사업 참여까지 전 과정을 직접 수행하며 총 2,000건의

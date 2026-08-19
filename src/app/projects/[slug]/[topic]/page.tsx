@@ -113,7 +113,7 @@ export default async function TopicDetail({
       </div>
 
       <h1 className="mb-4 text-2xl font-bold sm:text-3xl lg:text-4xl">{topic.title}</h1>
-      <p className="mb-8 text-lg leading-relaxed text-gray-300">
+      <p className="mb-8 text-lg leading-relaxed text-muted">
         {topic.summary}
       </p>
 
