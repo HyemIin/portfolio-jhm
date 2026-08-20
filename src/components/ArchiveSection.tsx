@@ -15,8 +15,13 @@ function ThemeIcon({ theme, className = "h-5 w-5" }: { theme: string; className?
   switch (theme) {
     case "백엔드 개발":
       return (
-        <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-          <path d="M21 3c-1.5 2-3.5 3.5-6 4.5C12.5 8.5 10 9 7 9c0 3 1 5.5 3 7.5S15 20 18 21c-1-2-1.5-4-1.5-6.5 0-2 .5-4 1.5-6 .5-1.5 1.5-3.5 3-5.5zM3 21c2-1 3.5-2 5-3.5-1.5-1.5-2.5-3-3-5C4 10 3.5 7.5 4 5c-1 2-1.5 4-1.5 6S3 15 4 17c.5 1 .5 2.5-1 4z" />
+        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 21C12 21 6 17 6 11C6 5 12 3 12 3C12 3 18 5 18 11C18 17 12 21 12 21Z" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 3V21" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M8 8C8 8 10 10 12 10" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M16 8C16 8 14 10 12 10" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 13C9 13 10.5 14.5 12 14.5" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 13C15 13 13.5 14.5 12 14.5" />
         </svg>
       );
     case "네트워크":
