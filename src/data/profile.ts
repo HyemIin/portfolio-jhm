@@ -56,7 +56,6 @@ export const experiences = [
           {
             label: "응시자",
             items: [
-              "JWT 기반 AccessToken/RefreshToken 인증, 중복 로그인 방지 (세션 ID 비교)",
               "객관식 문항 풀이 및 객관식 리포트 생성",
               "논서술형 문항 풀이 및 LLM 자동 채점 파이프라인 구축 (Gemini, OpenAI, Claude 모델 추상화)",
               "논서술형 문항 풀이 시 900ms 단위로 Redis 자동저장 로직 구현",
