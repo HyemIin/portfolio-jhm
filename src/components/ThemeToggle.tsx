@@ -3,12 +3,14 @@
 import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem("theme");
-    if (saved === "light") {
-      setDark(false);
+    if (saved === "dark") {
+      setDark(true);
+      document.documentElement.removeAttribute("data-theme");
+    } else {
       document.documentElement.setAttribute("data-theme", "light");
     }
   }, []);
@@ -17,10 +19,10 @@ export default function ThemeToggle() {
     const next = !dark;
     setDark(next);
     if (next) {
-      document.documentElement.removeAttribute("data-theme");
+      document.documentElement.setAttribute("data-theme", "dark");
       localStorage.setItem("theme", "dark");
     } else {
-      document.documentElement.setAttribute("data-theme", "light");
+      document.documentElement.removeAttribute("data-theme");
       localStorage.setItem("theme", "light");
     }
   };
