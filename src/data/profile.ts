@@ -152,6 +152,5 @@ export const skills = {
     "Docker",
     "Nginx",
   ],
-  Frontend: ["Next.js", "React", "TypeScript", "Recoil", "SWR"],
   Collaboration: ["Figma", "Jira", "Redmine"],
 };
